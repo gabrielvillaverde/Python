@@ -29,12 +29,10 @@ result = str(true_appearances) + str(love_appearances)
 result_as_int = int(result)
 
 # For Love Scores less than 10 or greater than 90, the message should be:
-
-if result_as_int <= 10 or result_as_int >= 90:
+if result_as_int < 10 or result_as_int > 90:
     print(f"Your score is {result_as_int}, you go together like coke and mentos.")
 
 # For Love Scores between 40 and 50, the message should be:
-
 elif result_as_int >= 40 and result_as_int <= 50:
     print(f"Your score is {result_as_int}, you are alright together.")
     
