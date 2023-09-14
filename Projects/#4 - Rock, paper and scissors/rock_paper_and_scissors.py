@@ -31,7 +31,7 @@ scissors = '''
 
 # game_images = [rock, paper, scissors]
 
-# print("Welcome to the Rock, Paper, and Scissors game.")
+print("Welcome to the Rock, Paper, and Scissors game.")
 
 # while True:
 #     while True:
