@@ -26,6 +26,5 @@ How the program works?
 - Normal message: "hello"
 - Shift amount = 5
 - Encoded message: "mjqqt"
-
 '''
 
