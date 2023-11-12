@@ -9,6 +9,6 @@ while True:
     caesar(text, shift, direction)    
     if not continue_cipher():
         break
-
+    
 
     
