@@ -37,7 +37,7 @@ def another_participant():
             print("Please type 'yes' or 'no'.")
             
 def find_max_bidder(auction_dictionary):
-    max_bidder = max(auction_dictionary, key=auction_dictionary.get)
+    max_bidder = max(auction_dictionary, key=auction_dictionary.get) # This line uses the max() function to find the key (participant's name) that has the maximum value in the auction_dictionary dictionary. The key=auction_dictionary.get part instructs max() to use the values of the dictionary to determine the maximum.
     max_bid = auction_dictionary[max_bidder]
     return max_bidder, max_bid
 
