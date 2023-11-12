@@ -1,46 +1,24 @@
 from presentation import welcome_message
-from secret_auction import clear_console
+from secret_auction import clear_console, get_name, get_bid, another_participant
 
 print(welcome_message)
 
 auction_dictionary = {}
 
 while True:
-    while True:
-        name = input("What is your name? ")
-        if name.isalpha():
-            name = name.capitalize()
-            break
-        else:
-            print("Please enter alphabetic characters only for your name.")
-    
-    while True:
-        bid_input = input(f"Hello {name}, what is your bid? ")
-        try:
-            bid = int(bid_input)
-            break
-        except ValueError:
-            print("Please enter only numbers for the bid.")
-
+    name = get_name()
+    bid = get_bid(name)
+        
     auction_dictionary[name] = bid
 
-    while True:
-        another_participant = input("Is there another participant? Type 'yes' or 'no' ").lower()
-        if another_participant == "yes" or another_participant == "no":
-            break
-        else:
-            print("Please type 'yes' or 'no'.")
-
-    if another_participant == "no":
+    if another_participant() == "no":
         break
     clear_console()
     
-max_bidder = max(auction_dictionary, key=auction_dictionary.get)
+max_bidder = max(auction_dictionary, key=auction_dictionary.get) # This line uses the max() function to find the key (participant's name) that has the maximum value in the auction_dictionary dictionary. The key=auction_dictionary.get part instructs max() to use the values of the dictionary to determine the maximum.
 max_bid = auction_dictionary[max_bidder]
 
 print(f"The winner is {max_bidder} with a bid of ${max_bid}. Congratulations {max_bidder}!")
-
-# THINGS TO IMPROVE: CREATE FUNCTIONS OF THE INPUTS OF NAME AND BID, ALL IN ONE
     
     
 
